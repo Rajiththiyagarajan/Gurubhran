@@ -1,0 +1,229 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #241f1b;
+  background: #f7f3ee;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  --ink: #241f1b;
+  --muted-ink: #756d65;
+  --paper: #fffdfa;
+  --canvas: #f7f3ee;
+  --line: rgba(77, 61, 45, 0.14);
+  --gold: #b77d2d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(215, 179, 109, 0.11), transparent 25rem),
+    linear-gradient(180deg, #fffdfa 0%, var(--canvas) 48%, #fffdfa 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.order-input {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 0;
+  border-bottom: 1px solid rgba(77, 61, 45, 0.2);
+  color: #241f1b;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.order-input:focus {
+  border-color: var(--gold);
+}
+
+.hero-order-button {
+  animation: orderCtaPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes orderCtaPulse {
+  0%,
+  100% {
+    box-shadow: 0 8px 22px rgba(183, 125, 45, 0.12), 0 0 0 0 rgba(183, 125, 45, 0.22);
+  }
+  50% {
+    box-shadow: 0 12px 28px rgba(183, 125, 45, 0.24), 0 0 0 7px rgba(183, 125, 45, 0.08);
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fffdfa;
+  background: var(--gold);
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+main {
+  animation: routeEnter 0.55s ease-out both;
+}
+
+section {
+  position: relative;
+}
+
+@keyframes routeEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sliderProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes instagramFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(2deg);
+  }
+}
+
+@keyframes instagramPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes loaderReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loaderProgress {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseBorder {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.01);
+  }
+}
+
+.cta-button-ring {
+  background: conic-gradient(
+    from 0deg,
+    #8a5d22,
+    #f8df9d,
+    #b77d2d,
+    #fff1b8,
+    #8a5d22
+  );
+  box-shadow: 0 0 0 1px rgba(52, 35, 16, 0.35);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
